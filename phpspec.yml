@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Parkiller
+        psr4_prefix: Parkiller
+        src_path: app
