@@ -1,0 +1,25 @@
+<?php $__env->startSection('htmlheader_title'); ?>
+Home
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('main-content'); ?>
+<head>
+    <script type="text/javascript">var centreGot = false;</script><?php echo $map['js']; ?>
+
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Home</div>
+
+                <div class="panel-body">
+                  <?php echo $map['html']; ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

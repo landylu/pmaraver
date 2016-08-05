@@ -1,0 +1,36 @@
+<?php $__env->startSection('htmlheader_title'); ?>
+Home
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('main-content'); ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-6">
+                <!-- Horizontal Form -->
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Editar Rol:<?php echo $roles->descripcion; ?> </h3>
+                    </div><!-- /.box-header -->
+                    <!-- form start -->
+                    <?php echo Form::model($roles,['route'=>['roles.update',$roles],'method'=>'PUT','class'=>'form-horizontal']); ?>
+
+                    <div class="box-body">
+                         <?php echo $__env->make('roles.form.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>                       
+                    </div><!-- /.box-body -->
+                    <div class="box-footer">
+                        <?php echo Form::reset('Cancelar',['class'=>'btn btn-default']); ?>
+
+                        <!--<button type="submit" class="btn btn-info pull-right">Sign in</button>-->
+                        <?php echo Form::submit('Registrar',['class'=>'btn btn-info pull-right']); ?>
+
+                    </div><!-- /.box-footer -->
+                    <?php echo Form::close();; ?>
+
+                </div><!-- /.box -->
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
